@@ -1,16 +1,15 @@
 
-
-let i = 5;
-
-do { 
-console.log ("saludo");
-} while (i <  3)
-
-
-for ( let i ; i <= 10; i++) {
-    console.log(i);
+function calculoTotal (precioProducto, unidadesProducto) {
+    
+    let total = (precioProducto * unidadesProducto)
+    let final = total + envio;
+    return (final + envio) ;
 }
 
-console.log("fin")
-    
-    
+const envio = 150;
+
+let producto = parseFloat(prompt("Indicar el precio del producto:"));
+let unidades = parseInt(prompt("Indicar la cantidad de unidades:"));
+
+let precioFinal = calculoTotal (producto, unidades);
+alert("El precio final de los productos incluido el envio es $" + precioFinal);
